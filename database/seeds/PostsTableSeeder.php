@@ -17,12 +17,12 @@ class PostsTableSeeder extends Seeder
 
         for ($i=0; $i < 100; $i++) {
             $newPost = new Post();
-            $newPost->img = "https://picsum.photos/id/200/300/$i";
+            $newPost->img = "https://picsum.photos/id/$i/350/500";
             $newPost->Titolo =$faker->word();
             $newPost->Autore =$faker->name();
             $newPost->Descrizione =$faker->paragraph();
             $newPost->Data =$faker->date('Y-m-d');
-
+            $newPost->save();
         }
     }
 }
