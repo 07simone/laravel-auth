@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::paginate(20);
-        return view('admin.index', ['posts' => $posts]);
+        return view('admin.posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -44,12 +44,13 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+
+        return view("admin.posts.show", compact("post"));
     }
 
     /**

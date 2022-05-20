@@ -84,7 +84,7 @@
 
                 <div class="titolo">
                     @if (Auth::check())
-                        Benvenuto {{Auth::user()['name']}}
+                        Benvenuto {{Auth::user()['name']}}              {{--  messaggio di benvenuto presente nella home ad utente loggato --}}
                     @else
 
                     @endif
